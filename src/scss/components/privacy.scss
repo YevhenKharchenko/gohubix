@@ -1,5 +1,5 @@
 .policy-section {
-  background: #07071c;
+  background: #151515;
   padding-top: 112px;
   padding-bottom: 32px;
 
@@ -12,8 +12,8 @@
 .policy-main-title {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  font-size: 28px;
-  line-height: 1.35714;
+  font-size: 32px;
+  line-height: 1.3125;
   color: #fff;
   margin-bottom: 40px;
 
@@ -25,19 +25,19 @@
 
 .policy-title {
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 18px;
+  line-height: 1.55556;
   color: #fff;
   margin-bottom: 16px;
 
   @include media(desktop) {
-    font-size: 28px;
-    line-height: 1.35714;
+    line-height: 1.55556;
   }
 }
 
 .policy-subtitle {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -49,7 +49,7 @@
 }
 
 .policy-text {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -69,7 +69,7 @@
 }
 
 .policy-item {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;

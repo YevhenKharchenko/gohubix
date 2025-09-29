@@ -3,4 +3,4 @@ Disallow: /admin/
 Disallow: /private/
 Allow: /
 
-Sitemap: https://webflowio.pro/sitemap.xml
+Sitemap: https://gohubix.online/sitemap.xml
