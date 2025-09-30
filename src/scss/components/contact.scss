@@ -1,15 +1,8 @@
-.contact-wrapper {
-  @include media(desktop) {
-  }
-}
-
 .contact-section {
-  padding-top: 30px;
-  padding-bottom: 70px;
+  padding-bottom: 80px;
 
   @include media(desktop) {
-    padding-top: 60px;
-    padding-bottom: 180px;
+    padding-bottom: 120px;
   }
 }
 
@@ -19,66 +12,26 @@
 }
 
 .contact-content-wrapper {
-  @include media(desktop) {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-  }
-}
-
-.contact-text-wrapper {
-  margin-bottom: 40px;
-
-  @include media(desktop) {
-    width: 100%;
-    max-width: 360px;
-    margin: 0;
-  }
-}
-
-.contact-title-wrapper {
-  margin-left: 0;
+  background: linear-gradient(
+    90deg,
+    #f43f5e 4.33%,
+    #b537b9 53.85%,
+    #9333ea 99.99%
+  );
+  border-radius: 50px;
+  padding: 60px 16px;
 
   @include media(desktop) {
+    padding: 60px;
   }
 }
 
 .contact-subtitle {
-  text-align: left;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
 
   @include media(desktop) {
-  }
-}
-
-.contact-start-link {
-  background: #0f8;
-  border-radius: 50px;
-  padding: 12px 28px;
-  width: 100%;
-  max-width: 343px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #3e3e3e;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
-
-  &:active,
-  &:focus {
-    background: #fff;
-    color: #3e3e3e;
-  }
-
-  @include media(desktop) {
-    max-width: max-content;
-
-    &:hover {
-      background: #fff;
-      color: #3e3e3e;
-    }
   }
 }
 
@@ -86,9 +39,11 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin-bottom: 40px;
 
   @include media(desktop) {
     flex-direction: row;
+    justify-content: center;
     align-items: center;
   }
 }
@@ -110,12 +65,55 @@
 }
 
 .contact-item-link {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.55556;
   color: #fff;
 
   @include media(desktop) {
+  }
+}
+
+.contact-book-link {
+  box-shadow: inset 0 -8px 32px 0 rgba(89, 25, 108, 0.25);
+  background: rgba(131, 111, 255, 0.2),
+    linear-gradient(
+      180deg,
+      rgba(243, 238, 255, 0.2) 0%,
+      rgba(243, 238, 255, 0.2) 100%
+    );
+  border-radius: 12px;
+  padding: 12px 28px;
+  width: 100%;
+  max-width: 311px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.57143;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease-in-out;
+
+  &:active,
+  &:focus {
+    background: #fff;
+    color: #3e3e3e;
+    border: none;
+  }
+
+  @include media(desktop) {
+    max-width: max-content;
+
+    &:hover {
+      background: #fff;
+      color: #3e3e3e;
+      border: none;
+    }
   }
 }

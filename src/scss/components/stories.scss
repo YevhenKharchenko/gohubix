@@ -1,0 +1,99 @@
+.stories-wrapper {
+  @include media(desktop) {
+  }
+}
+
+.stories-section {
+  padding-top: 30px;
+  padding-bottom: 90px;
+
+  @include media(desktop) {
+    padding-top: 60px;
+    padding-bottom: 140px;
+    background: radial-gradient(50% 50% at 50% 50%, #fff 0%, #151515 100%),
+      radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 255, 255, 0) 0%,
+        #151515 100%
+      );
+  }
+}
+
+.stories-container {
+  @include media(desktop) {
+  }
+}
+
+.stories-title {
+  text-align: center;
+
+  @include media(desktop) {
+  }
+}
+
+.stories-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+
+  @include media(desktop) {
+    margin-bottom: 60px;
+  }
+}
+
+.stories-list {
+  background: radial-gradient(50% 50% at 50% 50%, #fff 0%, #151515 100%),
+    radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, #151515 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+
+  @include media(desktop) {
+    background: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+  }
+}
+
+.stories-list-item {
+  background: #080808;
+  border-radius: 12px;
+  padding: 20px 20px 60px 20px;
+  width: 100%;
+  max-width: 343px;
+  min-height: 356px;
+
+  @include media(desktop) {
+    max-width: 394px;
+  }
+}
+
+.stories-img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.stories-list-item-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.55556;
+  color: #c86fff;
+  margin-bottom: 20px;
+
+  @include media(desktop) {
+  }
+}
+
+.stories-list-item-text {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.55556;
+  color: #f5f5f5;
+
+  @include media(desktop) {
+  }
+}
