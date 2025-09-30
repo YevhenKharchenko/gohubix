@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoHu</title>
+    <link rel="icon" type="image/png" href="/gohubix/favicon.png" />
+    
+    <script type="module" crossorigin src="/gohubix/commonHelpers3.js"></script>
+    <link rel="modulepreload" crossorigin href="/gohubix/assets/header-519e0d5e.js">
+    <link rel="stylesheet" href="/gohubix/assets/header-81d0f27f.css">
+  </head>
+  <body class="body">
+    <header class="header">
+  <div class="container header-container">
+    <nav class="nav">
+      <a class="header-logo-link" href="./">
+        <img
+          class="hero-title-img"
+          src="data:image/png;base64,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"
+          alt="Logo"
+          width="40"
+          height="40"
+        /><span class="header-logo-span">GoHu</span></a
+      >
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#home">Home</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#about">About</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#venture">Venture Lab</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#mentor">Mentor Hub</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#stories">Stories</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#pricing">Pricing</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#resources">Resources</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="./index.html#contact">Contact</a>
+        </li>
+      </ul>
+      <a href="#contact" class="header-join-link">Join GoHu</a>
+      <button class="nav-btn" type="button" aria-label="Open mobile menu">
+        <svg class="menu-icon" width="40" height="40">
+          <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-menu"></use>
+        </svg>
+      </button>
+      <button class="close-btn" type="button" aria-label="Close mobile menu">
+        <svg class="close-icon" width="40" height="40">
+          <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-close"></use>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+    <div class="context-menu">
+  <nav class="context-nav">
+    <ul class="context-nav-list">
+      <li class="context-list-item">
+        <a class="context-list-link" href="./index.html#home">Home</a>
+      </li>
+      <li class="context-list-item">
+        <a class="context-list-link" href="./index.html#about">About</a>
+      </li>
+      <li class="context-list-item">
+        <a class="context-list-link" href="./index.html#venture">Venture Lab</a>
+      </li>
+      <li class="context-list-item">
+        <a class="context-list-link" href="./index.html#mentor">Mentor Hub</a>
+      </li>
+      <li class="context-list-item">
+        <a class="context-list-link" href="./index.html#stories">Stories</a>
+      </li>
+      <li class="context-list-item">
+        <a class="context-list-link" href="./index.html#pricing">Pricing</a>
+      </li>
+      <li class="context-list-item">
+        <a class="context-list-link" href="./index.html#resources">Resources</a>
+      </li>
+      <li class="context-list-item">
+        <a class="context-list-link" href="./index.html#contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+    <main>
+      <div class="hero-bg-wrapper">
+        <section class="section hero-section" id="home">
+  <div class="container hero-container">
+    <h1 class="hero-main-title">
+      Your Venture.<br />
+      Your <span class="hero-title-span">Playground.</span>
+    </h1>
+    <p class="hero-text">
+      GoHu is where founders practice, learn, and connect before stepping into
+      the real venture world. Train with AI-powered tools, role-play investors,
+      and build confidence with a global mentor network.
+    </p>
+    <a href="#contact" class="hero-start-link">Start Training Today</a>
+  </div>
+</section>
+
+        <section class="section about-section" id="about">
+  <div class="container about-container">
+    <div class="about-content-wrapper">
+      <div class="about-text-wrapper">
+        <h2 class="section-title about-title">About</h2>
+        <p class="section-subtitle about-subtitle">
+          From Idea <span class="subtitle-span">Sparks</span> to
+          <span class="subtitle-span">Investor-Ready</span>
+        </p>
+        <p class="about-text">
+          Most founders fail not because of bad ideas — but because they aren’t
+          prepared for the high-pressure reality of pitching, scaling, and
+          fundraising. GoHu helps you:
+        </p>
+      </div>
+      <ul class="about-list">
+        <li class="about-list-item">
+          <div class="about-icon-wrapper">
+            <svg class="about-icon" width="24" height="24">
+              <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-test"></use>
+            </svg>
+          </div>
+          <p class="about-list-item-text">Stress-test your business model</p>
+        </li>
+        <li class="about-list-item">
+          <div class="about-icon-wrapper">
+            <svg class="about-icon" width="24" height="24">
+              <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-ai-chip"></use>
+            </svg>
+          </div>
+          <p class="about-list-item-text">
+            Improve your pitch with live & AI feedback
+          </p>
+        </li>
+        <li class="about-list-item">
+          <div class="about-icon-wrapper">
+            <svg class="about-icon" width="24" height="24">
+              <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-business"></use>
+            </svg>
+          </div>
+          <p class="about-list-item-text">Learn how investors think</p>
+        </li>
+        <li class="about-list-item">
+          <div class="about-icon-wrapper">
+            <svg class="about-icon" width="24" height="24">
+              <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-group"></use>
+            </svg>
+          </div>
+          <p class="about-list-item-text">
+            Connect with people who’ve been there
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      </div>
+      <section class="section venture-section" id="venture">
+  <div class="container venture-container">
+    <div class="venture-content-wrapper">
+      <div class="venture-text-wrapper">
+        <h2 class="section-title venture-title">Venture Lab</h2>
+        <p class="section-subtitle venture-subtitle">
+          <span class="subtitle-span">Practice</span> Without the Risk
+        </p>
+        <ul class="venture-list">
+          <li class="venture-list-item">
+            <svg class="venture-icon" width="12" height="12">
+              <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-target"></use>
+            </svg>
+            <p class="venture-list-item-text">
+              AI Pitch Coach with real-time scoring
+            </p>
+          </li>
+          <li class="venture-list-item">
+            <svg class="venture-icon" width="12" height="12">
+              <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-target"></use>
+            </svg>
+            <p class="venture-list-item-text">Interactive Financial Sandbox</p>
+          </li>
+          <li class="venture-list-item">
+            <svg class="venture-icon" width="12" height="12">
+              <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-target"></use>
+            </svg>
+            <p class="venture-list-item-text">
+              Investor Role-Play Q&A simulations
+            </p>
+          </li>
+          <li class="venture-list-item">
+            <svg class="venture-icon" width="12" height="12">
+              <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-target"></use>
+            </svg>
+            <p class="venture-list-item-text">
+              Virtual Demo Days with community voting
+            </p>
+          </li>
+          <li class="venture-list-item">
+            <svg class="venture-icon" width="12" height="12">
+              <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-target"></use>
+            </svg>
+            <p class="venture-list-item-text">Business Model Canvas builder</p>
+          </li>
+        </ul>
+      </div>
+      <picture>
+        <source
+          srcset="/gohubix/assets/venture-bg-desk-bdb79678.png "
+          media="(min-width: 1440px)"
+          width="594"
+          height="320" />
+        <source
+          srcset="/gohubix/assets/venture-bg-mob-dc163681.png "
+          width="343"
+          height="208" />
+        <img
+          class="venture-img"
+          src="/gohubix/assets/venture-bg-mob-dc163681.png"
+          alt="Smartphone"
+          width="343"
+          height="208"
+          loading="lazy"
+      /></picture>
+    </div>
+  </div>
+</section>
+
+      <section class="section process-section" id="process">
+  <div class="container process-container">
+    <h2 class="section-title process-title">Mentor Hub</h2>
+    <p class="section-subtitle process-subtitle">
+      Guidance from
+      <span class="subtitle-span">Experienced Builders</span>
+    </p>
+    <ul class="process-list">
+      <li class="process-list-item">
+        <svg class="process-icon" width="40" height="40">
+          <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-teacher"></use>
+        </svg>
+        <p class="process-list-item-text">1:1 mentor sessions</p>
+      </li>
+      <li class="process-list-item">
+        <svg class="process-icon" width="40" height="40">
+          <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-reviews"></use>
+        </svg>
+        <p class="process-list-item-text">Group peer reviews</p>
+      </li>
+      <li class="process-list-item">
+        <svg class="process-icon" width="40" height="40">
+          <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-wallet"></use>
+        </svg>
+        <p class="process-list-item-text">
+          Weekly office hours with VCs & angels
+        </p>
+      </li>
+      <li class="process-list-item">
+        <svg class="process-icon" width="40" height="40">
+          <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-planet"></use>
+        </svg>
+        <p class="process-list-item-text">On-demand masterclasses</p>
+      </li>
+      <li class="process-list-item">
+        <svg class="process-icon" width="40" height="40">
+          <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-book"></use>
+        </svg>
+        <p class="process-list-item-text">
+          Founder-to-founder learning circles
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="section stories-section" id="stories">
+  <div class="container stories-container">
+    <h2 class="section-title stories-title">Success Stories</h2>
+    <p class="section-subtitle stories-subtitle">
+      Where Training <span class="subtitle-span">Meets Real Growth</span>
+    </p>
+    <ul class="stories-list">
+      <li class="stories-list-item">
+        <picture>
+          <source
+            srcset="/gohubix/assets/stories-img1-desk-45af1c9f.png "
+            media="(min-width: 1440px)"
+            width="354"
+            height="152" />
+          <source
+            srcset="/gohubix/assets/stories-img1-mob-d84afddb.png "
+            width="303"
+            height="152" />
+          <img
+            class="stories-img"
+            src="/gohubix/assets/stories-img1-mob-d84afddb.png"
+            alt="Figure"
+            width="303"
+            height="152"
+            loading="lazy"
+        /></picture>
+        <p class="stories-list-item-title">NeoHealth (Berlin)</p>
+        <p class="stories-list-item-text">
+          Closed €2.4M after GoHu Demo Day simulations.
+        </p>
+      </li>
+      <li class="stories-list-item">
+        <picture>
+          <source
+            srcset="/gohubix/assets/stories-img2-desk-7bd27616.png "
+            media="(min-width: 1440px)"
+            width="354"
+            height="152" />
+          <source
+            srcset="/gohubix/assets/stories-img2-mob-c720869a.png "
+            width="303"
+            height="152" />
+          <img
+            class="stories-img"
+            src="/gohubix/assets/stories-img2-mob-c720869a.png"
+            alt="Figure"
+            width="303"
+            height="152"
+            loading="lazy"
+        /></picture>
+        <p class="stories-list-item-title">EcoBytes (Copenhagen)</p>
+        <p class="stories-list-item-text">
+          Pivoted their B2C model after mentor feedback, now €80K MRR.
+        </p>
+      </li>
+      <li class="stories-list-item">
+        <picture>
+          <source
+            srcset="/gohubix/assets/stories-img3-desk-bdec5f35.png "
+            media="(min-width: 1440px)"
+            width="354"
+            height="152" />
+          <source
+            srcset="/gohubix/assets/stories-img3-mob-f4929cfb.png "
+            width="303"
+            height="152" />
+          <img
+            class="stories-img"
+            src="/gohubix/assets/stories-img3-mob-f4929cfb.png"
+            alt="Figure"
+            width="303"
+            height="152"
+            loading="lazy"
+        /></picture>
+        <p class="stories-list-item-title">SkillCloud (Warsaw)</p>
+        <p class="stories-list-item-text">
+          Used GoHu’s financial sandbox to validate pricing, scaled to 5K paying
+          users.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="section resources-section" id="resources">
+  <div class="container resources-container">
+    <div class="resources-content-wrapper">
+      <div class="resources-text-wrapper">
+        <h2 class="section-title resources-title">Resources</h2>
+        <p class="section-subtitle resources-subtitle">
+          <span class="subtitle-span">Learn Smarter, Faster.</span>
+        </p>
+        <ul class="resources-list">
+          <li class="resources-list-item">
+            <p class="resources-list-item-text">
+              Startup Playbooks (fundraising, go-to-market, scaling)
+            </p>
+            <a href="" class="resources-item-link">
+              <svg class="resources-icon" width="20" height="20">
+                <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-arrow"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="resources-list-item">
+            <p class="resources-list-item-text">
+              AI-powered pitch deck templates
+            </p>
+            <a href="" class="resources-item-link">
+              <svg class="resources-icon" width="20" height="20">
+                <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-arrow"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="resources-list-item">
+            <p class="resources-list-item-text">
+              Access to investor question libraries
+            </p>
+            <a href="" class="resources-item-link">
+              <svg class="resources-icon" width="20" height="20">
+                <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-arrow"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="resources-list-item">
+            <p class="resources-list-item-text">Recorded Demo Day highlights</p>
+            <a href="" class="resources-item-link">
+              <svg class="resources-icon" width="20" height="20">
+                <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-arrow"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a href="#contact" class="resources-explore-link">Explore Resources</a>
+      </div>
+      <picture>
+        <source
+          srcset="/gohubix/assets/resources-bg-desk-b3d25de8.png "
+          media="(min-width: 1440px)"
+          width="594"
+          height="434" />
+        <source
+          srcset="/gohubix/assets/resources-bg-mob-4220e00a.png "
+          width="343"
+          height="238" />
+        <img
+          class="resources-img"
+          src="/gohubix/assets/resources-bg-mob-4220e00a.png"
+          alt="Pen"
+          width="343"
+          height="238"
+          loading="lazy"
+      /></picture>
+    </div>
+  </div>
+</section>
+
+      <section class="section pricing-section" id="pricing">
+  <div class="pricing-bg-wrapper">
+    <div class="container pricing-container">
+      <div class="pricing-content-wrapper">
+        <div class="pricing-text-wrapper">
+          <h2 class="section-title pricing-title">Pricing</h2>
+          <p class="section-subtitle pricing-subtitle">
+            Learn Smarter, Faster.
+          </p>
+          <ul class="pricing-list">
+            <li class="pricing-list-item">
+              <p class="pricing-list-item-title">Starter</p>
+              <div class="pricing-list-item-wrapper">
+                <p class="pricing-list-item-subtitle">Idea-stage founders</p>
+                <p class="pricing-list-item-price">€19/mo</p>
+                <ul class="pricing-features-list">
+                  <li class="pricing-features-item">
+                    <svg class="check-icon" width="24" height="24">
+                      <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-check-fill"></use>
+                    </svg>
+                    <p class="pricing-features-text">AI pitch builder</p>
+                  </li>
+                  <li class="pricing-features-item">
+                    <svg class="check-icon" width="24" height="24">
+                      <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-check-fill"></use>
+                    </svg>
+                    <p class="pricing-features-text">Financial sandbox</p>
+                  </li>
+                  <li class="pricing-features-item">
+                    <svg class="check-icon" width="24" height="24">
+                      <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-check-fill"></use>
+                    </svg>
+                    <p class="pricing-features-text">Community access</p>
+                  </li>
+                </ul>
+                <a href="#contact" class="pricing-request-link"
+                  >Request Proposal</a
+                >
+              </div>
+            </li>
+            <li class="pricing-list-item">
+              <p class="pricing-list-item-title">Pro</p>
+              <div class="pricing-list-item-wrapper">
+                <p class="pricing-list-item-subtitle">Early-stage startups</p>
+                <p class="pricing-list-item-price">€59/mo</p>
+                <ul class="pricing-features-list">
+                  <li class="pricing-features-item">
+                    <svg class="check-icon" width="24" height="24">
+                      <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-check-fill"></use>
+                    </svg>
+                    <p class="pricing-features-text">
+                      All Starter features + mentor hub access
+                    </p>
+                  </li>
+                  <li class="pricing-features-item">
+                    <svg class="check-icon" width="24" height="24">
+                      <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-check-fill"></use>
+                    </svg>
+                    <p class="pricing-features-text">Peer reviews</p>
+                  </li>
+                  <li class="pricing-features-item">
+                    <svg class="check-icon" width="24" height="24">
+                      <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-check-fill"></use>
+                    </svg>
+                    <p class="pricing-features-text">Demo day slots</p>
+                  </li>
+                </ul>
+                <a href="#contact" class="pricing-request-link"
+                  >Request Proposal</a
+                >
+              </div>
+            </li>
+            <li class="pricing-list-item">
+              <p class="pricing-list-item-title">Team</p>
+              <div class="pricing-list-item-wrapper">
+                <p class="pricing-list-item-subtitle">
+                  Co-founder teams (up to 5)
+                </p>
+                <p class="pricing-list-item-price">€199/mo</p>
+                <ul class="pricing-features-list">
+                  <li class="pricing-features-item">
+                    <svg class="check-icon" width="24" height="24">
+                      <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-check-fill"></use>
+                    </svg>
+                    <p class="pricing-features-text">Full platform access</p>
+                  </li>
+                  <li class="pricing-features-item">
+                    <svg class="check-icon" width="24" height="24">
+                      <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-check-fill"></use>
+                    </svg>
+                    <p class="pricing-features-text">Team dashboards</p>
+                  </li>
+                  <li class="pricing-features-item">
+                    <svg class="check-icon" width="24" height="24">
+                      <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-check-fill"></use>
+                    </svg>
+                    <p class="pricing-features-text">Advanced analytics</p>
+                  </li>
+                  <li class="pricing-features-item">
+                    <svg class="check-icon" width="24" height="24">
+                      <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-check-fill"></use>
+                    </svg>
+                    <p class="pricing-features-text">Investor lounge</p>
+                  </li>
+                </ul>
+                <a href="#contact" class="pricing-request-link"
+                  >Request Proposal</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="section contact-section" id="contact">
+  <div class="container contact-container">
+    <div class="contact-content-wrapper">
+      <div class="contact-text-wrapper">
+        <p class="section-subtitle contact-subtitle">
+          Let’s Build Your Future Together.
+        </p>
+      </div>
+      <ul class="contact-list">
+        <li class="contact-list-item">
+          <svg class="contact-icon" width="24" height="24">
+            <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-mail"></use>
+          </svg>
+          <a href="mailto:info@gohubix.online" class="contact-item-link"
+            >info@gohubix.online
+          </a>
+        </li>
+        <li class="contact-list-item">
+          <svg class="contact-icon" width="24" height="24">
+            <use href="/gohubix/assets/sprite-4cc19fca.svg#icon-location"></use>
+          </svg>
+          <a href="" class="contact-item-link"
+            >GoHu Global Ltd., Torstraße 221, Berlin, Germany
+          </a>
+        </li>
+      </ul>
+      <a href="#home" class="contact-book-link">Book a Call</a>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer" id="footer">
+  <div class="container footer-container">
+    <nav class="footer-nav">
+      <ul class="footer-list">
+        <li class="footer-list-item">
+          <a class="footer-link" href="./privacy-policy.html">Privacy Policy</a>
+        </li>
+        <li class="footer-list-item">
+          <a class="footer-link" href="./terms-and-conditions.html"
+            >Terms and Conditions</a
+          >
+        </li>
+        <li class="footer-list-item">
+          <a class="footer-link" href="./cookies-policy.html">Cookies Policy</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <p class="footer-text">© 2025 gohubix.online - All rights reserved.</p>
+</footer>
+
+    <section id="cookie-banner" class="cookie-banner-section">
+  <div class="cookie-banner-wrapper">
+    <p class="cookie-banner-text">
+      We use cookies to enhance your experience while using our website. By
+      continuing to use this site, you consent to our use of cookies.
+    </p>
+    <div class="cookie-banner-buttons">
+      <button class="cookie-accept-btn" id="cookie-accept">Accept</button>
+      <button class="cookie-decline-btn" id="cookie-decline">Reject</button>
+    </div>
+  </div>
+</section>
+
+
+    
+  </body>
+</html>
